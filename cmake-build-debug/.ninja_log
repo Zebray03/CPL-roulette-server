@@ -1,0 +1,4 @@
+# ninja log v6
+2	562	7583935862804887	build.ninja	9a339c42eb14d8ee
+1	1146	7583875379647744	CMakeFiles/CPL_roulette_server.dir/main.c.obj	6576f7e960625374
+1149	1443	7583875391011643	CPL_roulette_server.exe	e5d00d83632ba5d9
