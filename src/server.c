@@ -1,6 +1,10 @@
-#include "../include/Server.h"
+#include "../include/server.h"
 
-void initialize_server(SERVER *server) {
+#include <stdio.h>
+
+#define PORT 8080
+
+void initialize_server(Server *server) {
     WSADATA wsaData;
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
         printf("Failed to initialize Winsock. Error Code: %d\n", WSAGetLastError());
@@ -33,7 +37,7 @@ void initialize_server(SERVER *server) {
     }
 }
 
-void accept_clients(SERVER *server) {
+void accept_clients(Server *server) {
     int addrlen = sizeof(server->client_addr);
     printf("Waiting for Player 1 to connect...\n");
     server->client_socket1 = accept(server->server_socket, (struct sockaddr *)&server->client_addr, &addrlen);
@@ -44,15 +48,6 @@ void accept_clients(SERVER *server) {
     printf("Player 2 connected.\n");
 }
 
-void send_message(SOCKET client, const char *message) {
-    send(client, message, strlen(message), 0);
-}
-
-void receive_message(SOCKET client, char *buffer) {
-    memset(buffer, 0, BUFFER_SIZE);
-    recv(client, buffer, BUFFER_SIZE, 0);
-}
-
-void handle_game(SERVER *server) {
-    // 使用 Game 类的逻辑管理整个游戏
+void handle_game(Server *server) {
+    // 使用 game 类的逻辑管理整个游戏
 }

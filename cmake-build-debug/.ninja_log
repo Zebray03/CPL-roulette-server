@@ -1,4 +1,9 @@
 # ninja log v6
-2	562	7583935862804887	build.ninja	9a339c42eb14d8ee
-1	1146	7583875379647744	CMakeFiles/CPL_roulette_server.dir/main.c.obj	6576f7e960625374
-1149	1443	7583875391011643	CPL_roulette_server.exe	e5d00d83632ba5d9
+2	794	7595988912204122	build.ninja	9a339c42eb14d8ee
+1425	1757	7595985061642438	CPL_roulette_server.exe	5fb39b4cb0a233a
+149	1322	7595985048882044	CMakeFiles/CPL_roulette_server.dir/src/game.c.obj	51d731b015d775ef
+224	1425	7595985049635340	CMakeFiles/CPL_roulette_server.dir/src/server.c.obj	cd322b72a49fcfdf
+75	447	7595985048138778	CMakeFiles/CPL_roulette_server.dir/src/player.c.obj	8c128119d7e30da2
+3	986	7595905906291793	CMakeFiles/CPL_roulette_server.dir/util/socket.c.obj	7676975f34ddf227
+3	1186	7595985047415395	CMakeFiles/CPL_roulette_server.dir/src/main.c.obj	ac11ce51f1f24347
+305	662	7595985050443687	CMakeFiles/CPL_roulette_server.dir/src/pistol.c.obj	c35a93fc603d2c64
