@@ -8,17 +8,16 @@
 #include <ws2tcpip.h>
 
 typedef struct game {
-    Player gambler;
-    Player demon;
-    Pistol pistol;
-    bool gambler_turn;
+    Player* demon;
+    Player* gambler;
+    Pistol* pistol;
+    bool demon_turn;
+    int round;
 } Game;
 
 void initialize_game(Game* game);
 
-void shoot(Game* game, Player* source, Player* dest,
-           SOCKET current_socket, char current_buffer[],
-           SOCKET opponent_socket, char opponent_buffer[]);
+int shoot(Game* game, Player* source, Player* dest);
 
 bool is_game_over(Game* game);
 

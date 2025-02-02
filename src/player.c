@@ -59,7 +59,7 @@ void use_beer(Player* player) {
 }
 
 // 这里“任意一发”理解为每一发子弹
-void use_phone(Player* player, Pistol pistol) {
+void use_phone(Player* player, Pistol* pistol) {
     if (player->phone_num == 0) {
         printf("don't have phone\n");
     }
@@ -68,8 +68,8 @@ void use_phone(Player* player, Pistol pistol) {
     }
     else {
         printf("the info is as followed:\n");
-        for (int i = 0; i < pistol.bullet_remaining_num; i++) {
-            if (pistol.is_real_bullet[5 - pistol.bullet_remaining_num + i]) {
+        for (int i = 0; i < pistol->bullet_remaining_num; i++) {
+            if (pistol->is_real_bullet[5 - pistol->bullet_remaining_num + i]) {
                 printf("1\n");
             }
             else {

@@ -1,9 +1,17 @@
 # ninja log v6
-2	794	7595988912204122	build.ninja	9a339c42eb14d8ee
-1425	1757	7595985061642438	CPL_roulette_server.exe	5fb39b4cb0a233a
-149	1322	7595985048882044	CMakeFiles/CPL_roulette_server.dir/src/game.c.obj	51d731b015d775ef
-224	1425	7595985049635340	CMakeFiles/CPL_roulette_server.dir/src/server.c.obj	cd322b72a49fcfdf
-75	447	7595985048138778	CMakeFiles/CPL_roulette_server.dir/src/player.c.obj	8c128119d7e30da2
-3	986	7595905906291793	CMakeFiles/CPL_roulette_server.dir/util/socket.c.obj	7676975f34ddf227
-3	1186	7595985047415395	CMakeFiles/CPL_roulette_server.dir/src/main.c.obj	ac11ce51f1f24347
-305	662	7595985050443687	CMakeFiles/CPL_roulette_server.dir/src/pistol.c.obj	c35a93fc603d2c64
+3	249	7601969969042367	build.ninja	9a339c42eb14d8ee
+1191	1356	7601333478239466	CPL_roulette_server.exe	5fb39b4cb0a233a
+24	1142	7601333466575236	CMakeFiles/CPL_roulette_server.dir/src/game.c.obj	8b631ff92c59a26c
+5	1133	7601333466377185	CMakeFiles/CPL_roulette_server.dir/src/main.c.obj	e718e6bddb154a5a
+49	1160	7601333466819261	CMakeFiles/CPL_roulette_server.dir/util/socket.c.obj	2a8ad557e8f872fd
+17	169	7601333466501540	CMakeFiles/CPL_roulette_server.dir/src/player.c.obj	2f11c74d421eed73
+32	1191	7601333466653916	CMakeFiles/CPL_roulette_server.dir/src/server.c.obj	4e53660839bcf576
+41	178	7601333466739426	CMakeFiles/CPL_roulette_server.dir/src/pistol.c.obj	bf3bc023a1664833
+1	260	7601969969042367	build.ninja	20fffa7a4b10f2de
+26	141	7601969969617796	CMakeFiles/CPL_roulette_server.dir/src/network_protocol.c.obj	dbb344bf497b87d6
+34	383	7601969969694174	CMakeFiles/CPL_roulette_server.dir/lib/cJSON/cJSON.c.obj	e03d68caefcaea66
+43	1197	7601969969787454	CMakeFiles/CPL_roulette_server.dir/src/network_controller.c.obj	733d3aaf5bcd4dc
+4	906	7601970731342731	CMakeFiles/CPL_roulette_server.dir/src/main.c.obj	e718e6bddb154a5a
+18	916	7601970731486394	CMakeFiles/CPL_roulette_server.dir/src/server.c.obj	4e53660839bcf576
+4	818	7601970911293000	CMakeFiles/CPL_roulette_server.dir/src/game.c.obj	8b631ff92c59a26c
+819	933	7601970919441709	CPL_roulette_server.exe	2665ec67a1fda911

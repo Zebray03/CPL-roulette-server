@@ -40,14 +40,10 @@ void initialize_server(Server *server) {
 void accept_clients(Server *server) {
     int addrlen = sizeof(server->client_addr);
     printf("Waiting for Player 1 to connect...\n");
-    server->client_socket1 = accept(server->server_socket, (struct sockaddr *)&server->client_addr, &addrlen);
+    server->demon_socket = accept(server->server_socket, (struct sockaddr *)&server->client_addr, &addrlen);
     printf("Player 1 connected.\n");
 
     printf("Waiting for Player 2 to connect...\n");
-    server->client_socket2 = accept(server->server_socket, (struct sockaddr *)&server->client_addr, &addrlen);
+    server->gambler_socket = accept(server->server_socket, (struct sockaddr *)&server->client_addr, &addrlen);
     printf("Player 2 connected.\n");
-}
-
-void handle_game(Server *server) {
-    // 使用 game 类的逻辑管理整个游戏
 }
