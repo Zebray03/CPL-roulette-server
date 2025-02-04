@@ -70,13 +70,6 @@ build CMakeFiles/CPL_roulette_server.dir/src/game.c.obj: C_COMPILER__CPL_roulett
   OBJECT_DIR = CMakeFiles\CPL_roulette_server.dir
   OBJECT_FILE_DIR = CMakeFiles\CPL_roulette_server.dir\src
 
-build CMakeFiles/CPL_roulette_server.dir/src/server.c.obj: C_COMPILER__CPL_roulette_server_unscanned_Debug C$:/Users/Zhang$ Alphonse/Desktop/CPL-project/CPL-roulette/CPL-roulette-server/src/server.c || cmake_object_order_depends_target_CPL_roulette_server
-  DEP_FILE = CMakeFiles\CPL_roulette_server.dir\src\server.c.obj.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -I"C:/Users/Zhang Alphonse/Desktop/CPL-project/CPL-roulette/CPL-roulette-server/include" -I"C:/Users/Zhang Alphonse/Desktop/CPL-project/CPL-roulette/CPL-roulette-server/lib/cJSON"
-  OBJECT_DIR = CMakeFiles\CPL_roulette_server.dir
-  OBJECT_FILE_DIR = CMakeFiles\CPL_roulette_server.dir\src
-
 build CMakeFiles/CPL_roulette_server.dir/src/pistol.c.obj: C_COMPILER__CPL_roulette_server_unscanned_Debug C$:/Users/Zhang$ Alphonse/Desktop/CPL-project/CPL-roulette/CPL-roulette-server/src/pistol.c || cmake_object_order_depends_target_CPL_roulette_server
   DEP_FILE = CMakeFiles\CPL_roulette_server.dir\src\pistol.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
@@ -113,7 +106,7 @@ build CMakeFiles/CPL_roulette_server.dir/src/network_controller.c.obj: C_COMPILE
 #############################################
 # Link the executable CPL_roulette_server.exe
 
-build CPL_roulette_server.exe: C_EXECUTABLE_LINKER__CPL_roulette_server_Debug CMakeFiles/CPL_roulette_server.dir/src/main.c.obj CMakeFiles/CPL_roulette_server.dir/src/player.c.obj CMakeFiles/CPL_roulette_server.dir/src/game.c.obj CMakeFiles/CPL_roulette_server.dir/src/server.c.obj CMakeFiles/CPL_roulette_server.dir/src/pistol.c.obj CMakeFiles/CPL_roulette_server.dir/src/network_protocol.c.obj CMakeFiles/CPL_roulette_server.dir/lib/cJSON/cJSON.c.obj CMakeFiles/CPL_roulette_server.dir/src/network_controller.c.obj
+build CPL_roulette_server.exe: C_EXECUTABLE_LINKER__CPL_roulette_server_Debug CMakeFiles/CPL_roulette_server.dir/src/main.c.obj CMakeFiles/CPL_roulette_server.dir/src/player.c.obj CMakeFiles/CPL_roulette_server.dir/src/game.c.obj CMakeFiles/CPL_roulette_server.dir/src/pistol.c.obj CMakeFiles/CPL_roulette_server.dir/src/network_protocol.c.obj CMakeFiles/CPL_roulette_server.dir/lib/cJSON/cJSON.c.obj CMakeFiles/CPL_roulette_server.dir/src/network_controller.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\CPL_roulette_server.dir

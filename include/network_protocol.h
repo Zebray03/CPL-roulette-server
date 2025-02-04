@@ -4,15 +4,17 @@
 #define DEFAULT_PORT 8080
 
 typedef enum {
+    ACKNOWLEDGE,
     JOIN_REQUEST,
     GAME_BEGIN,
+    GAME_OVER,
     GAME_STATE,
     ITEM_ASSIGN,
-    PLAYER_STATE,
     ITEM_USE,
+    PHONE_RESULT,
     PLAYER_SHOOT,
+    PLAYER_STATE,
     SHOOT_RESULT,
-    GAME_OVER
 } NetMessageType;
 
 const char* type_to_string(NetMessageType type);

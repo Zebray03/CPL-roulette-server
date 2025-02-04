@@ -15,13 +15,11 @@ add_executable(CPL_roulette_server
         src/main.c
         src/player.c
         src/game.c
-        src/server.c
         src/pistol.c
         src/network_protocol.c
 
         include/player.h
         include/game.h
-        include/server.h
         include/pistol.h
         include/network_protocol.h
 

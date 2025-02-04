@@ -1,6 +1,12 @@
 {
   "type": "GAME_STATE",
-  "turn": true,
-  "round": 1,
-  "real_bullet_num": 3
+  "data": {
+    "turn": true,
+    "rival_hp": 3,
+    "rival_knife_num": 0,
+    "rival_beer_num": 0,
+    "rival_phone_num": 0,
+    "round": 1,
+    "real_bullet_num": 3
+  }
 }

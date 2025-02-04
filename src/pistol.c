@@ -1,7 +1,6 @@
 #include "../include/pistol.h"
 
 #include <stdlib.h>
-#include <time.h>
 
 #define MIN_REAL_BULLETS 1
 #define MAX_REAL_BULLETS 3
@@ -15,8 +14,7 @@ void initialize_pistol(Pistol* pistol) {
 }
 
 void generate_bullets(Pistol* pistol) {
-    srand(time(NULL));
-    pistol->real_bullet_num = MIN_REAL_BULLETS + rand() % (MAX_REAL_BULLETS - MIN_REAL_BULLETS + 1);
+    pistol->real_bullet_num = MIN_REAL_BULLETS + rand() % (MAX_REAL_BULLETS - MIN_REAL_BULLETS);
     for (int i = 0; i < pistol->real_bullet_num; i++) {
         int pos;
         do {

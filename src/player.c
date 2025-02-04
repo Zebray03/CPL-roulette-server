@@ -1,12 +1,14 @@
-#include "../include/player.h"
+#include "player.h"
+#include "network_controller.h"
 
-#include <stdio.h>
 #include <stdlib.h>
 
-#define HP_MAX 3
-
-void initialize_player(Player* player) {
+void initialize_player(Player* player, bool is_demon) {
     player->hp = HP_MAX;
+    player->is_demon = is_demon;
+    for (int i = 0; i < ROUND_NUM; i++) {
+        player->bullets[i] = 0;
+    }
     player->knife_num = 0;
     player->beer_num = 0;
     player->phone_num = 0;
@@ -16,9 +18,9 @@ void initialize_player(Player* player) {
 }
 
 void assign_items(Player* player) {
-    player->knife_num = rand() % 2;
-    player->beer_num = rand() % 2;
-    player->phone_num = rand() % 2;
+    player->knife_num = rand() % 3;
+    player->beer_num = rand() % 3;
+    player->phone_num = rand() % 3;
 }
 
 void calculate_damage(Player* target_player, int damage) {
@@ -29,54 +31,36 @@ void calculate_damage(Player* target_player, int damage) {
 }
 
 void use_knife(Player* player) {
-    if (player->knife_num == 0) {
-        printf("don't have knife\n");
-    }
-    else if (player->knife_use) {
-        printf("have used knife already\n");
-    }
-    else {
-        player->knife_num--;
-        player->knife_use = true;
-    }
+    player->knife_num--;
+    player->knife_use = true;
 }
 
 void use_beer(Player* player) {
-    if (player->beer_num == 0) {
-        printf("don't have beer\n");
+    player->hp += 2;
+    if (player->hp > HP_MAX) {
+        player->hp = HP_MAX;
     }
-    else if (player->beer_use) {
-        printf("have used beer already\n");
-    }
-    else {
-        player->hp += 2;
-        if (player->hp > HP_MAX) {
-            player->hp = HP_MAX;
-        }
-        player->beer_num--;
-        player->beer_use = true;
-    }
+
+    player->beer_num--;
+    player->beer_use = true;
 }
 
-// 这里“任意一发”理解为每一发子弹
-void use_phone(Player* player, Pistol* pistol) {
-    if (player->phone_num == 0) {
-        printf("don't have phone\n");
-    }
-    else if (player->phone_use) {
-        printf("have used phone already\n");
-    }
-    else {
-        printf("the info is as followed:\n");
-        for (int i = 0; i < pistol->bullet_remaining_num; i++) {
-            if (pistol->is_real_bullet[5 - pistol->bullet_remaining_num + i]) {
-                printf("1\n");
-            }
-            else {
-                printf("0\n");
-            }
+cJSON* use_phone(Player* player, const Pistol* pistol) {
+    int unknown_num = 0;
+    int* unknown_index = malloc(sizeof(int) * 5);
+    for (int i = 0; i < ROUND_NUM; i++) {
+        if (player->bullets[i] == 0) {
+            unknown_index[unknown_num] = i;
+            unknown_num++;
         }
-        player->phone_num--;
-        player->phone_use = true;
     }
+    int index = unknown_index[rand() % unknown_num];
+    bool is_true = pistol->is_real_bullet[index] == 1;
+    free(unknown_index);
+
+    player->bullets[index] = is_true ? 1 : -1;
+    player->phone_num--;
+    player->phone_use = true;
+
+    return build_phone_result_data(index, is_true);
 }
